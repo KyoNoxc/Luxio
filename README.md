@@ -1,4 +1,4 @@
-# Luxio 💜
+# Luxio 
 
 Dashboard web oscuro para registrar y visualizar gastos personales por categoría.
 
