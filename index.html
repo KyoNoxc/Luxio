@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Luxio — Dashboard de Gastos</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<h2 class="sr-only">Luxio — dashboard de gastos personales</h2>
+<div class="root">
+  <aside class="sidebar">
+    <div class="sb-brand">
+      <div class="sb-brand-name">Luxio</div>
+      <div class="sb-brand-sub">Panel personal</div>
+    </div>
+    <div class="sb-section">Principal</div>
+    <div class="sb-item active"><i class="ti ti-layout-dashboard" aria-hidden="true"></i>Dashboard</div>
+    <div class="sb-item"><i class="ti ti-list" aria-hidden="true"></i>Historial</div>
+    <div class="sb-item"><i class="ti ti-chart-pie" aria-hidden="true"></i>Estadísticas</div>
+    <div class="sb-section">Cuenta</div>
+    <div class="sb-item"><i class="ti ti-target" aria-hidden="true"></i>Presupuesto</div>
+    <div class="sb-item"><i class="ti ti-settings" aria-hidden="true"></i>Ajustes</div>
+    <div class="sb-bottom">
+      <div class="sb-item"><i class="ti ti-user" aria-hidden="true"></i>Perfil</div>
+    </div>
+  </aside>
+  <div class="main">
+    <div class="topbar">
+      <span class="topbar-title">Dashboard</span>
+      <div class="toast" id="toast"></div>
+    </div>
+    <div class="content">
+      <div class="stats">
+        <div class="stat"><div class="stat-label">Total gastado</div><div class="stat-value" id="stat-total">$0</div></div>
+        <div class="stat"><div class="stat-label">Registrados</div><div class="stat-value" id="stat-count">0</div></div>
+        <div class="stat"><div class="stat-label">Mayor gasto</div><div class="stat-value" id="stat-max">$0</div></div>
+      </div>
+      <div class="card">
+        <div class="card-title">Nuevo gasto</div>
+        <div class="form-row">
+          <div class="field"><label for="inp-desc">Descripción</label><input type="text" id="inp-desc" placeholder="Ej. Pizza, Uber..."></div>
+          <div class="field"><label for="inp-amount">Monto</label><input type="number" id="inp-amount" placeholder="0" min="0" step="1"></div>
+          <div class="field"><label for="inp-cat">Categoría</label>
+            <select id="inp-cat">
+              <option value="Comida">Comida</option>
+              <option value="Transporte">Transporte</option>
+              <option value="Entretenimiento">Entretenimiento</option>
+              <option value="Salud">Salud</option>
+              <option value="Educación">Educación</option>
+              <option value="Otro">Otro</option>
+            </select>
+          </div>
+          <button class="btn-add" onclick="addExpense()">+ Agregar</button>
+        </div>
+      </div>
+      <div class="mid">
+        <div class="card"><div class="card-title">Por categoría</div><div id="bars"><p class="empty">Sin gastos aún</p></div></div>
+        <div class="card"><div class="card-title">Últimos gastos</div><div id="list"><p class="empty">Sin gastos aún</p></div></div>
+      </div>
+      <div class="bottom">
+        <div class="card"><div class="card-title">Categorías activas</div><div class="cat-pills" id="cat-pills"><p class="empty">Sin gastos aún</p></div></div>
+        <div class="card"><div class="card-title">Distribución</div><div class="progress-section" id="prog-section"><p class="empty">Sin gastos aún</p></div></div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
