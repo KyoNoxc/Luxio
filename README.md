@@ -21,7 +21,7 @@ Dashboard web oscuro para registrar y visualizar gastos personales por categorí
 
 ## Ver en vivo
 
-`https://TU-USUARIO.github.io/luxio`
+`https://KyoNoxc.github.io/luxio`
 
 ## Autor
 
